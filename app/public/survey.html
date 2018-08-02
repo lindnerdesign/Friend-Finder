@@ -7,7 +7,9 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css"/>
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css"/>
     <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png"/>
-    <script type="text/javascript" src="#"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
     <title>Friend Finder</title>
 
@@ -20,7 +22,12 @@
           height: 300px;
           text-align: center;
          }
+
+      * {
+         font-family: 'Quicksand', sans-serif;
+        }
     </style>
+    
 </head>
 
 <section>
@@ -38,17 +45,21 @@
   <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputEmail4">Name</label>
-        <input type="email" class="form-control" id="inputEmail4" placeholder="Name">
+        <input type="text" class="form-control" id="name" placeholder="Required">
       </div>
       <div class="form-group col-md-6">
-        <label for="inputPassword4">Photo URL</label>
-        <input type="password" class="form-control" id="photoURL" placeholder="Photo URL">
+        <label for="inputPassword4">Profile Image URL</label>
+        <input type="text" class="form-control" id="photoURL" placeholder="Required">
       </div>
+    </div>
+
+    <div>
+      <p>1 - Disagree, 2 - Slightly Agree,  3 - Neutral,  4 - Somewhat Agree,  5 - Strongly Agree</p>
     </div>
 
     <div class="form-group">
-      <label for="exampleFormControlSelect1">Example select</label>
-      <select class="form-control" id="exampleFormControlSelect1">
+      <label for="exampleFormControlSelect1"></label>You find it difficult to introduce yourself to other people.</label>
+      <select class="form-control" id="Q1">
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -58,8 +69,8 @@
     </div>
 
   <div class="form-group">
-      <label for="exampleFormControlSelect1">Example select</label>
-      <select class="form-control" id="exampleFormControlSelect1">
+      <label for="exampleFormControlSelect1">You find it easy to stay relaxed even when there is some pressure.</label>
+      <select class="form-control" id="Q2">
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -69,8 +80,8 @@
     </div>
 
   <div class="form-group">
-      <label for="exampleFormControlSelect1">Example select</label>
-      <select class="form-control" id="exampleFormControlSelect1">
+      <label for="exampleFormControlSelect1">You do not usually initiate conversations.</label>
+      <select class="form-control" id="Q3">
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -80,8 +91,8 @@
     </div>
 
   <div class="form-group">
-      <label for="exampleFormControlSelect1">Example select</label>
-      <select class="form-control" id="exampleFormControlSelect1">
+      <label for="exampleFormControlSelect1">Being organized is more important to you than being adaptable.</label>
+      <select class="form-control" id="Q4">
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -91,8 +102,8 @@
     </div>
 
   <div class="form-group">
-      <label for="exampleFormControlSelect1">Example select</label>
-      <select class="form-control" id="exampleFormControlSelect1">
+      <label for="exampleFormControlSelect1">You are usually highly motivated and energetic.</label>
+      <select class="form-control" id="Q5">
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -102,8 +113,8 @@
     </div>
 
   <div class="form-group">
-      <label for="exampleFormControlSelect1">Example select</label>
-      <select class="form-control" id="exampleFormControlSelect1">
+      <label for="exampleFormControlSelect1">You do not mind being at the center of attention.</label>
+      <select class="form-control" id="Q6">
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -113,8 +124,8 @@
     </div>
 
   <div class="form-group">
-      <label for="exampleFormControlSelect1">Example select</label>
-      <select class="form-control" id="exampleFormControlSelect1">
+      <label for="exampleFormControlSelect1">You would rather improvise than spend time coming up with a detailed plan.</label>
+      <select class="form-control" id="Q7">
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -124,8 +135,8 @@
     </div>
     
   <div class="form-group">
-      <label for="exampleFormControlSelect1">Example select</label>
-      <select class="form-control" id="exampleFormControlSelect1">
+      <label for="exampleFormControlSelect1">In a discussion, truth should be more important than people’s sensitivities.</label>
+      <select class="form-control" id="Q8">
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -135,8 +146,8 @@
     </div>
 
   <div class="form-group">
-      <label for="exampleFormControlSelect1">Example select</label>
-      <select class="form-control" id="exampleFormControlSelect1">
+      <label for="exampleFormControlSelect1">An interesting book or a video game is often better than a social event.</label>
+      <select class="form-control" id="Q9">
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -146,8 +157,8 @@
     </div>
       
   <div class="form-group">
-      <label for="exampleFormControlSelect1">Example select</label>
-      <select class="form-control" id="exampleFormControlSelect1">
+      <label for="exampleFormControlSelect1">You are more of a natural improviser than a careful planner.</label>
+      <select class="form-control" id="Q10">
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -156,7 +167,7 @@
       </select>
     </div>
   
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary" id="surveySubmit">Submit</button>
 </form>
 </div>
 
@@ -164,12 +175,88 @@
 </br>
 <footer class="footer">
   <div class="container">
-    <p><a href="../data/friends.js">API Friends List</a> | <a href="https://github.com/lindnerdesign/Friend-Finder">GitHub Repo</a></p>
+    <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/lindnerdesign/Friend-Finder">GitHub Repo</a></p>
   </div>
 </footer>
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
+<!-- Javascript -->
+<script>
+  $(document).ready(function() {
+
+  $("#surveySubmit").on("click", function(){
+
+    var newFriend = {
+      name: $("#name").val().trim(),
+      photo: $("#photoURL").val().trim(),
+      scores:[ 
+          $("#Q1").val(),
+          $("#Q2").val(),
+          $("#Q3").val(),
+          $("#Q4").val(),
+          $("#Q5").val(),
+          $("#Q6").val(),
+          $("#Q7").val(),
+          $("#Q8").val(),
+          $("#Q9").val(),
+          $("#Q10").val()
+      ]
+    };
+
+    $.post("/api/friends", newFriend, function(data) {
+
+        if (data) {
+          alert("Yay! Finding you a Best Friend!");
+          //Modal functionality here
+          $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+          })
+        }
+
+        else {
+          alert("Please Enter all your Data");
+        }
+
+        // Clear the form when submitting
+          $("#name").val().trim(),
+          $("#photoURL").val().trim(),
+          $("#Q1").val(),
+          $("#Q2").val(),
+          $("#Q3").val(),
+          $("#Q4").val(),
+          $("#Q5").val(),
+          $("#Q6").val(),
+          $("#Q7").val(),
+          $("#Q8").val(),
+          $("#Q9").val(),
+          $("#Q10").val()
+      });
+  //jQuery Doc  
+  )};
+//jQuery Doc
+});
+
+</script>
 
 <!-- Bootstrap CDN-->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
