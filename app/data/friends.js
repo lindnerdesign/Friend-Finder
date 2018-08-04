@@ -1,6 +1,7 @@
 
 var friendList = [
-{
+
+    {
     "name":"Luna Lindner",
     "photo":"https://pbs.twimg.com/profile_images/948761950363664385/Fpr2Oz35_400x400.jpg",
     "scores":[
@@ -15,7 +16,7 @@ var friendList = [
         4,
         1
       ]
-  }
+    } 
 ]
 
 module.exports = friendList;
