@@ -2,21 +2,39 @@
 var friendList = [
 
     {
-    "name":"Luna Lindner",
-    "photo":"https://pbs.twimg.com/profile_images/948761950363664385/Fpr2Oz35_400x400.jpg",
+    "name":"Luna A. Doggo",
+    "photo":"https://media.giphy.com/media/kudIERso2pFiE/giphy.gif",
     "scores":[
-        5,
-        1,
-        4,
-        4,
-        5,
-        1,
-        2,
-        5,
-        4,
-        1
+        '1',
+        '1',
+        '1',
+        '2',
+        '5',
+        '4',
+        '2',
+        '5',
+        '2',
+        '4'
       ]
-    } 
+    },
+
+    {
+    "name":"Scared E. Cat",
+    "photo":"https://media.giphy.com/media/4nUjFdHFdHQiY/giphy.gif",
+    "scores":[
+        '3',
+        '1',
+        '4',
+        '4',
+        '2',
+        '1',
+        '2',
+        '1',
+        '2',
+        '1'
+      ]
+    }, 
+
 ]
 
 module.exports = friendList;

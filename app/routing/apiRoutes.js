@@ -15,30 +15,29 @@ module.exports = function (app) {
     // console.log(newFriendScores);
 
   var scoresMatched = [];
-  closestMatch = 0;
+  var closestMatch = 0;
 
   //Compare the two friends scores (arrays)
-  for (let i = 0; i < friendList.length; i++) {
+  for (var i = 0; i < friendList.length; i++) {
     
     var scoreDifference = 0;
 
-    for (let x = 0; x < newFriendScores.length; x++) {
-      scoreDifference += (Math.abs(friendList[i].scores[x]) - (newFriendScores[x]));
+    for (var x = 0; x < newFriendScores.length; x++) {
+      scoreDifference += (Math.abs(parseInt(friendList[i].scores[x])) - (parseInt(newFriendScores[x])));
     }
     scoresMatched.push(scoreDifference);
   }
 
   //find the two closest match
-  for (let i = 0; i < scoresMatched.length; i++) {
-    if (scoresMatched[i] <= scoresMatched[closestMatch]){
-      closestMatch = i;
+  for (var j = 0; j < scoresMatched.length; j++) {
+    if (scoresMatched[j] <= scoresMatched[closestMatch]){
+      closestMatch = j;
     }
   }
-  friendList.push(req.body);
   
   var bestFriend = friendList[closestMatch];
   res.json(bestFriend);
 
-
+  friendList.push(req.body);
   });
 };
