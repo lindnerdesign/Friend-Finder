@@ -35,9 +35,9 @@ module.exports = function (app) {
     }
   }
   
+  friendList.push(req.body);
+
   var bestFriend = friendList[closestMatch];
   res.json(bestFriend);
-
-  friendList.push(req.body);
   });
 };
