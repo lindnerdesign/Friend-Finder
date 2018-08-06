@@ -227,8 +227,6 @@ $(document).ready(function(){
             $.post("/api/friends", newFriend, function(data) {
               // console.log(data);
           
-
-            // .then(function(data){
             $('#myModal').modal("toggle")
             $('#myModal').on('shown.bs.modal', function () {
               $('#myForm').trigger('focus')
@@ -249,8 +247,6 @@ $(document).ready(function(){
             $('#Q8').val("");
             $('#Q9').val("");
             $('#Q10').val("");
-
-
             });
   });
 });
